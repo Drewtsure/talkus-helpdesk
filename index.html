@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Продвинутый HTML и CSS #7 / HTML Academy</title>
+  <script>
+  if (!Promise || !sessionStorage || sessionStorage.getItem('muller')) {
+    document.documentElement.classList.add('muller')
+  }
+  </script>
+  <link rel="stylesheet" href="css/octicons-3.3.0.min.css">
+  <link rel="stylesheet" href="css/bootstrap.v13.css">
+  <link rel="stylesheet" href="css/bootstrap-4.0.0-alpha2.min.2.css">
+  <meta name="theme-color" content="#313a87">
+  <link rel="mask-icon" href="/meta/favicon.svg" color="#313a87">
+  <link rel="apple-touch-icon" href="/meta/adaptive-touch-icon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/meta/adaptive-favicon.ico">
+  <link rel="manifest" href="/meta/adaptive.webmanifest">
+  <meta name="application-name" content="Продвинутый HTML и CSS #7">
+  <meta name="apple-mobile-web-app-title" content="Продвинутый HTML и CSS #7">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@htmlacademy_ru">
+  <meta property="fb:app_id" content="144426935714125">
+  <meta property="og:site_name" content="HTML Academy">
+  <meta property="og:type" content="website">
+  <meta name="twitter:url" property="og:url" content="https://up.htmlacademy.ru/adaptive/7">
+  <meta name="twitter:title" property="og:title" content="Интенсивный онлайн‑курс «Продвинутый HTML и CSS #7»">
+  <meta name="twitter:description" property="og:description" content="Интерфейс участника интенсивного онлайн‑курса">
+  <link rel="image_src" href="https://assets.htmlacademy.ru/og/intensive/adaptive-vk.png">
+  <meta name="twitter:image" property="og:image" content="https://assets.htmlacademy.ru/og/intensive/adaptive-og.png">
+</head>
+
+<body>
+  <noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MM92BM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>
+  (function(w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      'gtm.start': new Date().getTime(),
+      event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s),
+    dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-MM92BM');
+  </script>
+  <header class="page-header">
+    <div class="page-header__inner">
+      <div class="page-header__top">
+        <a class="page-header__logo" href="https://htmlacademy.ru" title="HTML Academy"><img src="https://assets.htmlacademy.ru/img/logo.svg" width="104" height="36" alt="HTML Academy"></a>
+        <nav class="main-nav" aria-label="Основное меню" itemscope="itemscope" itemtype="http://www.schema.org/SiteNavigationElement">
+          <button class="main-nav__trigger" type="button"><span></span></button>
+          <div class="main-nav__dropdown" id="main-menu">
+            <div class="main-nav__dropdown-inner">
+              <ul class="main-nav__list main-nav__list--main">
+                <li class="main-nav__item" itemprop="name"><a class="main-nav__link" href="https://htmlacademy.ru/program" itemprop="url"><span class="main-nav__icon"><svg aria-hidden="true"><use xlink:href="/img/sprites/general.v2.svg#course"></use></svg></span>Курсы</a></li>
+                <li class="main-nav__item main-nav__item--dropdown"><span class="main-nav__link"><span class="main-nav__icon" aria-hidden="true"><svg aria-hidden="true"><use xlink:href="/img/sprites/general.v2.svg#intensive"></use></svg></span>Интенсивы</span>
+                  <ul class="main-nav__list main-nav__list--lvl2">
+                    <li class="main-nav__item" itemprop="name"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss" itemprop="url">Базовый HTML и CSS</a></li>
+                    <li class="main-nav__item" itemprop="name"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" itemprop="url">Продвинутый HTML и CSS</a></li>
+                    <li class="main-nav__item" itemprop="name"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/javascript" itemprop="url">Базовый JavaScript</a></li>
+                  </ul>
+                </li>
+                <li class="main-nav__item main-nav__item--dropdown" itemprop="name"><a class="main-nav__link" href="/" itemprop="url"><span class="main-nav__icon"><svg aria-hidden="true"><use xlink:href="/img/sprites/general.v2.svg#my-intensive"></use></svg></span>Мои интенсивы</a>
+                  <ul class="main-nav__list main-nav__list--lvl2">
+                    <li class="main-nav__item" itemprop="name"><a class="main-nav__link" href="/adaptive/7" itemprop="url">Продвинутый HTML и CSS <time class="main-nav__time" datetime="2016-05-23">май</time></a></li>
+                    <li class="main-nav__item" itemprop="name"><a class="main-nav__link" href="/javascript/5" itemprop="url">Базовый JavaScript <time class="main-nav__time" datetime="2016-05-24">май</time></a></li>
+                    <li class="main-nav__item" itemprop="name"><a class="main-nav__link" href="/htmlcss/14" itemprop="url">Базовый HTML и CSS <time class="main-nav__time" datetime="2016-08-01">август</time></a></li>
+                    <li class="main-nav__item" itemprop="name"><a class="main-nav__link" href="/javascript/6" itemprop="url">Базовый JavaScript <time class="main-nav__time" datetime="2016-08-02">август</time></a></li>
+                    <li class="main-nav__item" itemprop="name"><a class="main-nav__link" href="/adaptive/8" itemprop="url">Продвинутый HTML и CSS <time class="main-nav__time" datetime="2016-09-05">сентябрь</time></a></li>
+                    <li class="main-nav__item" itemprop="name"><a class="main-nav__link" href="/javascript/7" itemprop="url">Базовый JavaScript <time class="main-nav__time" datetime="2016-10-04">октябрь</time></a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="main-nav__list main-nav__list--user">
+                <li class="main-nav__item main-nav__item--user" itemprop="name">
+                  <a class="main-nav__link" href="https://htmlacademy.ru/profile/z" title="Андрей Захарченко" itemprop="url"><img class="main-nav__avatar" src="https://htmlacademy.ru/upload/images/resized/medium/20140930_cf587143.jpg" alt="Андрей Захарченко"><span class="main-nav__username">Андрей Захарченко</span></a>
+                </li>
+                <li class="main-nav__item main-nav__item--login" itemprop="name"><a class="main-nav__link" href="https://htmlacademy.ru/logout?redirect_url=https%3A%2F%2Fup.htmlacademy.ru%2Fadaptive%2F7" itemprop="url"><span class="main-nav__icon"><svg aria-hidden="true"><use xlink:href="/img/sprites/general.v2.svg#logout"></use></svg></span>Выйти</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="page-content">
+    <div class="page-content__inner">
+      <div class="container m-b-3 p-a-0">
+        <header>
+          <div class="row">
+            <div class="col-lg-10 col-md-10">
+              <h1 class="m-t-2 p-t-1"><a class="reset" href="/adaptive/7">Продвинутый HTML и CSS #7</a></h1>
+              <p><i>c&nbsp;23&nbsp;мая по&nbsp;29&nbsp;июня 2016</i></p>
+            </div>
+            <div class="m-t-1 col-lg-2 col-md-2 text-xs-right p-t-2 hidden-xs-down">
+              <a href="/adaptive/7/curator" title="Связь с куратором">
+                <svg fill="#45668e" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17" height="28" width="28">
+                  <path d="M6 10h2v2H6V10z m4-3.5c0 2.14-2 2.5-2 2.5H6c0-0.55 0.45-1 1-1h0.5c0.28 0 0.5-0.22 0.5-0.5v-1c0-0.28-0.22-0.5-0.5-0.5h-1c-0.28 0-0.5 0.22-0.5 0.5v0.5H4c0-1.5 1.5-3 3-3s3 1 3 2.5zM7 2.3c3.14 0 5.7 2.56 5.7 5.7S10.14 13.7 7 13.7 1.3 11.14 1.3 8s2.56-5.7 5.7-5.7m0-1.3C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7S10.86 1 7 1z" />
+                </svg>
+              </a>
+              <a class="m-l-1" href="https://vk.com/intensive_adaptive_7" target="_blank" title="Группа интенсива Вконтакте">
+                <svg fill="#45668e" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" enable-background="new 0 0 32 32" width="32" height="32">
+                  <path d="M15.831 25.176h1.628s.452-.09.724-.362c.271-.271.181-.724.181-.724s0-2.171.995-2.533c.995-.362 2.262 2.081 3.709 3.076.995.724 1.809.543 1.809.543l3.619-.09s1.9-.09.995-1.628c-.09-.09-.543-1.086-2.714-3.166-2.262-2.171-1.99-1.809.814-5.428 1.719-2.262 2.352-3.619 2.171-4.161-.181-.543-1.447-.452-1.447-.452h-4.161s-.271 0-.543.09c-.181.09-.362.452-.362.452s-.633 1.719-1.538 3.257c-1.809 3.076-2.533 3.257-2.895 3.076-.724-.452-.543-1.809-.543-2.804 0-2.985.452-4.252-.905-4.614-.452-.09-.814-.181-1.9-.181-1.447 0-2.714 0-3.438.362-.452.271-.814.724-.633.814.271 0 .905.181 1.176.633.452.543.452 1.9.452 1.9s.271 3.528-.543 3.98c-.543.271-1.357-.271-2.985-3.166-.814-1.447-1.447-3.076-1.447-3.076s.09-.271-.181-.452-.633-.271-.633-.271l-3.89.09s-.543 0-.814.271c-.181.271 0 .724 0 .724s3.076 7.147 6.513 10.765c3.166 3.257 6.785 3.076 6.785 3.076z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <ul class="nav nav-tabs m-b-1">
+            <li class="nav-item"><a class="nav-link active" href="/adaptive/7">Основное</a></li>
+            <li class="nav-item"><a class="nav-link" href="/adaptive/7/live">Вебинар</a></li>
+            <li class="nav-item"><a class="nav-link" href="/adaptive/7/criteries">Критерии</a></li>
+            <li class="nav-item"><a class="nav-link" href="/adaptive/7/sources">Учебные макеты</a></li>
+            <li class="nav-item"><a class="nav-link" href="/adaptive/7/regulations">Регламент</a></li>
+            <li class="nav-item"><a class="nav-link" href="/adaptive/7/faq">FAQ</a></li>
+          </ul>
+        </header>
+        <div class="row">
+          <div class="col-md-9 col-xs-12 m-b-2">
+            <h2 class="m-b-2">Разделы</h2>
+            <div class="list-group">
+              <div class="list-group-item">
+                <table width="100%">
+                  <thead>
+                    <tr>
+                      <th class="hidden-xs-down" width="30">#</th>
+                      <th class="hidden-xs-down" width="80">Статус</th>
+                      <th>Описание</th>
+                      <th class="text-xs-center" width="120">Вебинар</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <a class="list-group-item" href="/adaptive/7/module/1">
+                <table width="100%">
+                  <tr>
+                    <td class="hidden-xs-down" width="30">1</td>
+                    <td class="hidden-xs-down" width="80"><span class="label label-pill label-success">открыт</span></td>
+                    <td><strong>Вводный</strong>
+                      <br>Знакомимся с Гитом и рабочим процессом на интенсиве.</td>
+                      <td class="text-xs-center" width="120"><a href="/adaptive/7/module/1/webinar" class="btn btn-secondary"><span class="octicon octicon-device-camera-video"></span> Запись
+                      </a>
+                      <br><small>от 23&nbsp;мая</small>
+                    </td>
+                  </tr>
+                </table>
+              </a>
+              <a class="list-group-item" href="/adaptive/7/module/2">
+                <table width="100%">
+                  <tr>
+                    <td class="hidden-xs-down" width="30">2</td>
+                    <td class="hidden-xs-down" width="80"><span class="label label-pill label-success">открыт</span></td>
+                    <td><strong>Методологии</strong>
+                      <br>Приёмы создания надёжной вёрстки.
+                    </td>
+                    <td class="text-xs-center" width="120"><a href="/adaptive/7/module/2/webinar" class="btn btn-secondary"><span class="octicon octicon-device-camera-video"></span> Запись
+                    </a>
+                    <br><small>от 26&nbsp;мая</small>
+                  </td>
+                </tr>
+              </table>
+            </a>
+            <a class="list-group-item" href="/adaptive/7/module/3">
+              <table width="100%">
+                <tr>
+                  <td class="hidden-xs-down" width="30">3</td>
+                  <td class="hidden-xs-down" width="80"><span class="label label-pill label-success">открыт</span></td>
+                  <td><strong>CSS-препроцессоры и автоматизация</strong>
+                    <br>Взглянем на CSS-препроцессоры. Разберёмся как они улучшают наш CSS-код.
+                  </td>
+                  <td class="text-xs-center" width="120"><a href="/adaptive/7/module/3/webinar" class="btn btn-secondary"><span class="octicon octicon-device-camera-video"></span> Запись
+                  </a>
+                  <br><small>от 30&nbsp;мая</small>
+                </td>
+              </tr>
+            </table>
+          </a>
+          <a class="list-group-item" href="/adaptive/7/module/4">
+            <table width="100%">
+              <tr>
+                <td class="hidden-xs-down" width="30">4</td>
+                <td class="hidden-xs-down" width="80"><span class="label label-pill label-success">открыт</span></td>
+                <td><strong>Адаптивность: сетки</strong>
+                  <br>Резиновая вёрстка, медиавыражения, разные виды адаптивности.
+                </td>
+                <td class="text-xs-center" width="120"><a href="/adaptive/7/module/4/webinar" class="btn btn-secondary"><span class="octicon octicon-device-camera-video"></span> Запись
+                </a>
+                <br><small>от 2&nbsp;июня</small>
+              </td>
+            </tr>
+          </table>
+        </a>
+        <a class="list-group-item" href="/adaptive/7/module/5">
+          <table width="100%">
+            <tr>
+              <td class="hidden-xs-down" width="30">5</td>
+              <td class="hidden-xs-down" width="80"><span class="label label-pill label-success">открыт</span></td>
+              <td><strong>Флексбокс</strong>
+                <br>Основные понятия. Применение на практике.
+              </td>
+              <td class="text-xs-center" width="120"><a href="/adaptive/7/module/5/webinar" class="btn btn-secondary"><span class="octicon octicon-device-camera-video"></span> Запись
+              </a>
+              <br><small>от 6&nbsp;июня</small>
+            </td>
+          </tr>
+        </table>
+      </a>
+      <a class="list-group-item" href="/adaptive/7/module/6">
+        <table width="100%">
+          <tr>
+            <td class="hidden-xs-down" width="30">6</td>
+            <td class="hidden-xs-down" width="80"><span class="label label-pill label-success">открыт</span></td>
+            <td><strong>Адаптивность: графика</strong>
+              <br>Адаптивные графика и медиаконтент, ретина, работа с SVG.
+            </td>
+            <td class="text-xs-center" width="120"><a href="/adaptive/7/module/6/webinar" class="btn btn-secondary"><span class="octicon octicon-device-camera-video"></span> Запись
+            </a>
+            <br><small>от 13&nbsp;июня</small></td>
+          </tr>
+        </table>
+      </a>
+      <a class="list-group-item" href="/adaptive/7/module/7">
+        <table width="100%">
+          <tr>
+            <td class="hidden-xs-down" width="30">7</td>
+            <td class="hidden-xs-down" width="80"><span class="label label-pill label-success">открыт</span></td>
+            <td><strong>Производительность вёрстки</strong>
+              <br>Тестируем и оптимизируем вёрстку.
+            </td>
+            <td class="text-xs-center" width="120"><a href="/adaptive/7/module/7/webinar" class="btn btn-secondary"><span class="octicon octicon-device-camera-video"></span> Запись
+            </a>
+            <br><small>от 16&nbsp;июня</small>
+          </td>
+        </tr>
+      </table>
+    </a>
+    <a class="list-group-item" href="/adaptive/7/module/8">
+      <table width="100%">
+        <tr>
+          <td class="hidden-xs-down" width="30">8</td>
+          <td class="hidden-xs-down" width="80"><span class="label label-pill label-success">открыт</span>
+          </td>
+          <td><strong>Автоматизация</strong>
+            <br>Машины должны страдать!
+          </td>
+          <td class="text-xs-center" width="120"><a href="/adaptive/7/module/8/webinar" class="btn btn-secondary"><span class="octicon octicon-device-camera-video"></span> Запись
+          </a>
+          <br><small>от 20&nbsp;июня</small>
+        </td>
+      </tr>
+    </table>
+  </a>
+  <a class="list-group-item" href="/adaptive/7/module/9">
+    <table width="100%">
+      <tr>
+        <td class="hidden-xs-down" width="30">9</td>
+        <td class="hidden-xs-down" width="80"><span class="label label-pill label-default">закрыт</span></td>
+        <td><strong>Инструменты ускорения вёрстки</strong>
+          <br>Ускоряемся. Обзор фреймворков и библиотек компонентов.</td>
+          <td class="text-xs-center" width="120"><a href="/adaptive/7/live" class="btn btn-success"><span class="octicon octicon-device-camera-video"></span>
+            Сегодня                  </a>
+            <br><small>с 19<sup>00</sup> до 21<sup>00</sup></small>
+          </td>
+        </tr>
+      </table>
+    </a>
+    <a class="list-group-item" href="/adaptive/7/module/10">
+      <table width="100%">
+        <tr>
+          <td class="hidden-xs-down" width="30">10</td>
+          <td class="hidden-xs-down" width="80"><span class="label label-pill label-default">закрыт</span></td>
+          <td><strong>Финал</strong>
+            <br>Подведение итогов.</td>
+            <td class="text-xs-center" width="120">
+              29&nbsp;июня, ср
+              <br><small>с 19<sup>00</sup> до 21<sup>00</sup></small>
+            </td>
+          </tr>
+        </table>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-3 col-xs-12">
+    <div class="text-xs-center m-b-1"><a class="btn btn-primary btn-block" href="/adaptive/7/check/projects">Итоговые проекты</a></div>
+    <h4 class="m-b-1">Меню куратора</h4>
+    <div class="list-group"><a class="list-group-item" href="/adaptive/7/manage/info">Управление информацией</a><a class="list-group-item" href="/adaptive/7/manage/users">Управление студентами</a><a class="list-group-item" href="/adaptive/7/manage/tutors">Управление наставниками</a><a class="list-group-item" href="/adaptive/7/manage/modules">Управление разделами</a><a class="list-group-item" href="/adaptive/7/manage/tasks">Управление заданиями</a><a class="list-group-item" href="/adaptive/7/manage/pages">Управление страницами</a><a class="list-group-item" href="/adaptive/7/manage/resources">Управление ресурсами</a></div>
+    <hr>
+    <div class="list-group"><a class="list-group-item" href="/adaptive/7/manage/projects">Проекты</a><a class="list-group-item" href="/adaptive/7/manage/transfers">Трансферы</a><a class="list-group-item" href="/adaptive/7/tutors">Наставники</a><a class="list-group-item" href="/adaptive/7/graduates">Выпускники</a><a class="list-group-item" href="/adaptive/7/manage/certificates">Сертификаты</a><a class="list-group-item" href="/adaptive/7/manage/interview">Результаты опроса</a><a class="list-group-item" href="/adaptive/7/manage/reviews">Отзывы</a><a class="list-group-item" href="/adaptive/7/manage/stat">Статистика</a></div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<footer class="page-footer">
+  <div class="page-footer__inner">
+    <div class="page-footer__social">
+      <a class="logo" href="https://htmlacademy.ru"><img src="https://assets.htmlacademy.ru/img/logo.svg" width="161" height="55" alt="HTML Academy"></a>
+      <ul class="social-links">
+        <li>
+          <a class="social-links__link" href="https://vk.com/htmlacademy" target="_blank" rel="noopener" title="Наш Вконтакте">
+            <svg aria-hidden="true">
+              <use xlink:href="/img/sprites/general.v2.svg#vkontakte"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="social-links__link" href="https://www.facebook.com/htmlacademy" target="_blank" rel="noopener" title="Наш Фейсбук">
+            <svg aria-hidden="true">
+              <use xlink:href="/img/sprites/general.v2.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="social-links__link" href="https://twitter.com/htmlacademy_ru" target="_blank" rel="noopener" title="Наш Твитер">
+            <svg aria-hidden="true">
+              <use xlink:href="/img/sprites/general.v2.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="social-links__link" href="https://www.instagram.com/htmlacademy" target="_blank" rel="noopener" title="Наш Инстаграм">
+            <svg aria-hidden="true">
+              <use xlink:href="/img/sprites/general.v2.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__block-group" role="navigation" aria-label="Дополнительное меню" itemscope="itemscope" itemtype="http://www.schema.org/SiteNavigationElement">
+      <div class="page-footer__education">
+        <h3 class="page-footer__header">Обучение</h3>
+        <ul class="page-footer__list">
+          <li itemprop="name"><a href="https://htmlacademy.ru/program" itemprop="url">Программа обучения</a></li>
+          <li itemprop="name"><a href="https://htmlacademy.ru/courses" itemprop="url">Все курсы</a></li>
+          <li itemprop="name"><a href="https://htmlacademy.ru/pricing" itemprop="url">Подписка</a></li>
+          <li itemprop="name"><a href="https://htmlacademy.ru/intensive/htmlcss" itemprop="url">Интенсив</a></li>
+          <li itemprop="name"><a href="https://nexus.htmlacademy.ru" itemprop="url">База выпускников</a></li>
+        </ul>
+      </div>
+      <div class="page-footer__company">
+        <h3 class="page-footer__header">Компания</h3>
+        <ul class="page-footer__list">
+          <li itemprop="name"><a href="https://htmlacademy.ru/about" itemprop="url">О нас</a></li>
+          <li itemprop="name"><a href="https://htmlacademy.ru/blog" itemprop="url">Блог</a></li>
+          <li itemprop="name"><a href="http://forum.academy" itemprop="url">Форум</a></li>
+          <li itemprop="name"><a href="https://shop.htmlacademy.ru" itemprop="url">Магазин</a></li>
+        </ul>
+      </div>
+      <div class="page-footer__contacts">
+        <h3 class="page-footer__header">Контакты</h3>
+        <ul class="page-footer__list">
+          <li itemprop="name"><a href="https://htmlacademy.ru/contacts" itemprop="url">Написать нам</a></li>
+        </ul>
+      </div>
+      <div class="page-footer__subscribe">
+        <h3 class="page-footer__header">Рассылка</h3>
+        <div class="page-footer__subscribe-text">
+          <p>Раз в месяц мы рассказываем об интересных статьях, новых инструментах и курсах. <a href="https://htmlacademy.ru/email">Подробнее о рассылке</a>.</p>
+        </div>
+        <form class="page-footer__form" action="https://htmlacademy.us3.list-manage.com/subscribe/post?u=2198e961288bea12428046a80&amp;id=a75c235315" method="post" target="_blank">
+          <input class="page-footer__form-field" type="email" name="EMAIL" placeholder="Эл. почта">
+          <input class="page-footer__form-submit" type="submit" name="subscribe" value="Подписаться">
+        </form>
+      </div>
+    </div>
+    <p class="page-footer__bottom"><span class="page-footer__bottom-links"><a href="https://htmlacademy.ru/docs/agreement">Соглашение</a><a href="https://htmlacademy.ru/docs/privacy">Конфиденциальность</a></span><span class="page-footer__copyright">© ООО «Интерактивные обучающие технологии», 2013−2016</span><span class="page-footer__way-of-love"><a href="https://github.com/htmlacademy" target="_blank"><img src="https://assets.htmlacademy.ru/img/icons/icon_with-love.svg" width="91" height="16" alt="Сделано с любовью в Санкт-Петербурге" title="Сделано с любовью в Санкт-Петербурге"></a></span></p>
+  </div>
+</footer>
+<script async src="https://assets.htmlacademy.ru/js/general.v2.js"></script>
+<script async src="/static/js/scripts.min.5.js"></script>
+<script>
+  (function(t,a,l,k,u,s,_){if(!t[u]){t[u]=function(){(t[u].q=t[u].q||[]).push(arguments)},t[u].l=1*new Date();s=a.createElement(l),_=a.getElementsByTagName(l)[0];s.async=1;s.src=k;_.parentNode.insertBefore(s,_)}})(window,document,'script','//www.talkus.io/plugin.js','talkus');
+  talkus('primaryColor', '#2E3191', '#202266');
+  talkus('create', 'BEGj5WwooP63QgktF');
+</script>
+</body>
+
+</html>
